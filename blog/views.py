@@ -1,10 +1,9 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Comment
-from .models import Post
-from .forms import CommentForm
-from .forms import PostForm
-from django.contrib.auth.decorators import login_required
+
+from blog.forms import CommentForm, PostForm
+from blog.models import Comment, Post
 
 
 def post_list(request):
